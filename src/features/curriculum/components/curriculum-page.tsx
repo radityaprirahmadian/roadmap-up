@@ -77,7 +77,7 @@ export const CurriculumPage = () => {
           </p>
 
           {/* Autoplaying Video */}
-          <div className="w-5/12 mx-auto rounded-3xl overflow-hidden shadow-xl border border-outline-variant/20 relative aspect-[9/16] bg-surface-variant">
+          <div className="w-8/12 md:w-5/12 mx-auto rounded-3xl overflow-hidden shadow-xl border border-outline-variant/20 relative aspect-[9/16] bg-surface-variant">
             <video 
               src="/WhatsApp%20Video%202026-06-14%20at%209.42.23%20AM.mp4" 
               autoPlay 
