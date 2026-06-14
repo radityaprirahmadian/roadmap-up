@@ -29,13 +29,13 @@ export default function BumperPage() {
               <QRCodeCanvas 
                 id="bumper-qr-code"
                 value={projectUrl} 
-                size={400}
+                size={600}
                 level="H"
                 includeMargin={true}
                 className="rounded-xl"
               />
             ) : (
-              <div className="w-[400px] h-[400px] bg-outline-variant/10 rounded-xl animate-pulse" />
+              <div className="w-[600px] h-[600px] bg-outline-variant/10 rounded-xl animate-pulse" />
             )}
           </div>
           
