@@ -6,6 +6,7 @@ import { CareerSelectionView } from './career-selection-view';
 import { CareerResultsView } from './career-results-view';
 import { CodingModal } from './coding-modal';
 import { QrCodeModal } from './qrcode-modal';
+import { PromoModal } from './promo-modal';
 
 export const CareerPathwayPage = () => {
   const {
@@ -24,13 +25,20 @@ export const CareerPathwayPage = () => {
   } = useCareerPathway();
 
   const [isQrModalOpen, setIsQrModalOpen] = useState(false);
+  const [isPromoModalOpen, setIsPromoModalOpen] = useState(false);
 
   return (
     <>
       {/* Top App Bar */}
       <header className="bg-background flex justify-between items-center px-container-padding py-md w-full sticky top-0 z-40">
-        {/* Left Spacer to keep the middle header perfectly centered */}
-        <div className="w-10" />
+        {/* Left Promo Button */}
+        <button
+          onClick={() => setIsPromoModalOpen(true)}
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-surface hover:bg-outline-variant/10 text-primary border border-outline-variant/20 shadow-sm cursor-pointer transition-all active:scale-95"
+          title="Daftar Promo Kelas Coding"
+        >
+          <span className="material-symbols-outlined text-2xl">local_offer</span>
+        </button>
 
         <div className="flex flex-col items-center gap-xs text-center flex-1">
           <span className="text-primary text-label-sm uppercase tracking-[0.2em] opacity-70">
@@ -93,6 +101,12 @@ export const CareerPathwayPage = () => {
       <QrCodeModal
         isOpen={isQrModalOpen}
         onClose={() => setIsQrModalOpen(false)}
+      />
+
+      {/* Promo Modal */}
+      <PromoModal
+        isOpen={isPromoModalOpen}
+        onClose={() => setIsPromoModalOpen(false)}
       />
     </>
   );
