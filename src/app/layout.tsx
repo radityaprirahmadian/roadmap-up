@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { Fira_Code } from 'next/font/google';
+import { Fira_Code, Fraunces } from 'next/font/google';
 import './globals.css';
 
 const firaCode = Fira_Code({
   subsets: ['latin'],
   variable: '--font-fira-code',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
 });
 
 export const metadata: Metadata = {
@@ -25,7 +30,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${firaCode.variable} antialiased font-sans bg-background text-on-background`}>
+      <body className={`${firaCode.variable} ${fraunces.variable} antialiased font-sans bg-background text-on-background`}>
         {children}
       </body>
     </html>

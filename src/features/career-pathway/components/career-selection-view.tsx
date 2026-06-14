@@ -39,7 +39,7 @@ export const CareerSelectionView: React.FC<CareerSelectionViewProps> = ({
     <section className="space-y-xl" id="screen-selection">
       <div className="space-y-sm pt-md mb-xl">
         <h2 className="text-headline-lg-mobile text-on-background leading-tight text-center">
-          Skills for Jobs based on AI
+          Pekerjaan Impian Anak-Anak
         </h2>
       </div>
 

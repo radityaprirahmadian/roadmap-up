@@ -1,12 +1,10 @@
-import { CareerPathwayPage } from '@/features/career-pathway/components/career-pathway-page';
+import { CurriculumPage } from '@/features/curriculum/components/curriculum-page';
+import { Metadata } from 'next';
 
-export default function Home() {
-  return (
-    <>
-      {/* Decorative Background Shapes */}
-      <div className="organic-blob bg-primary w-64 h-64 -top-20 -left-20"></div>
-      
-      <CareerPathwayPage />
-    </>
-  );
+export const metadata: Metadata = {
+  title: 'Curriculum | Coding Class by UP SLC',
+};
+
+export default function Page() {
+  return <CurriculumPage />;
 }
